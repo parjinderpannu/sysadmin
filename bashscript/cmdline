@@ -1,0 +1,1 @@
+for NO in {12..20}; do echo "Alln $NO";ssh -q splunk@sra-index-alln-$NO "echo \"`cat /tmp/ppannu_key`\" >> ~/.ssh/authorized_keys"; echo ""; done
