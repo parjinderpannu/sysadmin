@@ -17,9 +17,9 @@ def get_upcoming_movies_by_page(api_key, page_number=1):
 def main():
     api_key = "5bcacd05adb3b8df24f75c9b19c204bd"
     upcoming_movie_list = get_upcoming_movies_by_page(api_key,1)
-    data = json.dumps(upcoming_movie_list)
+    data = json.loads(upcoming_movie_list)
     # print is streaming to splunk 
-    print(json.dumps(data))
+    print(json.dumps(data["results"]))
 
 if __name__ == "__main__":
     main()
