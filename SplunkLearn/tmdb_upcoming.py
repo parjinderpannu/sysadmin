@@ -7,7 +7,7 @@ def tmdb_api_call(requestURL, parameters):
         print(response.json())
         exit()
     data = response.json()
-    return json.dump(data)
+    return json.dumps(data)
 
 def get_upcoming_movies_by_page(api_key, page_number=1):
     requestURL = "https://api.themoviedb.org/3/movie/upcoming"
@@ -19,7 +19,7 @@ def main():
     upcoming_movie_list = get_upcoming_movies_by_page(api_key,1)
     data = json.dumps(upcoming_movie_list)
     # print is streaming to splunk 
-    print(json.dumps(data["results"]))
+    print(json.dumps(data))
 
 if __name__ == "__main__":
     main()
