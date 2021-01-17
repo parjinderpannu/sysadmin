@@ -1,0 +1,7 @@
+# time duration
+ffmpeg -i HandlersPackage.mov -ss 00:00:10 -t 00:00:30 -c:v libx264 -qp 16 -c:a aac slice1.mp4  #mov to mp4 with -qp 16 quality libx264 encoder
+ffmpeg -i HandlersPackage.mov -ss 00:00:10 -t 00:00:30 -c:v libx264 -c:a aac slice1.mp4  # mov to mp4 smaller size than above
+
+# simple has some issue with start of recording
+
+ffmpeg -i Screen_Recording.mov 3_3-project_setup-configuration.mp4
