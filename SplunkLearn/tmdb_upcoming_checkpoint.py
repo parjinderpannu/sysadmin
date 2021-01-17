@@ -35,8 +35,8 @@ def stream_to_splunk(checkpoint_file,data):
 
 def main():
     api_key = "5bcacd05adb3b8df24f75c9b19c204bd"
-    # checkpoint_file = os.path.join(os.environ["SPLUNK_HOME"],'etc','apps','tmdb','bin','checkpoint','checkpoint.txt')
-    checkpoint_file = os.path.join('/Users','ppannu','code','personal','sysadmin','SplunkLearn','checkpoint','checkpoint.txt')
+    checkpoint_file = os.path.join(os.environ["SPLUNK_HOME"],'etc','apps','tmdb','bin','checkpoint','checkpoint.txt')
+    # checkpoint_file = os.path.join('/Users','ppannu','code','personal','sysadmin','SplunkLearn','checkpoint','checkpoint.txt')
     upcoming_movie_list = get_upcoming_movies_by_page(api_key,1)
     data = json.loads(upcoming_movie_list)
     # print is streaming to splunk 
