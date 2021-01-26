@@ -1,0 +1,5 @@
+
+# Onboarding related cmd
+%s/\t/\r/gc
+
+| inputlookup MyFile.csv | collect index=MySummaryIndex
